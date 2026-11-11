@@ -1,0 +1,14 @@
+/* TechNews — Bootstrap 5 adjustments (after style.css) */
+/* Mobile nav is now the Bootstrap 5 collapse navbar; the old slide-in menu is retired */
+.uc-mobile-menu { display: none !important; }
+.crunchify-top { display: none; }
+/* keep the desktop nav bar horizontal (navbar-expand-lg handles lg+) */
+
+/* Click-to-play YouTube facade — no iframe on load (keeps the demo CSP-clean;
+   the real video is injected on click, which plays in the downloaded template). */
+.yt-facade { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; cursor: pointer;
+  background: #161616 linear-gradient(180deg, #2b2b2b, #101010); display: flex; align-items: center; justify-content: center; }
+.yt-facade .yt-play { width: 62px; height: 44px; background: #f00; border-radius: 11px; position: relative; box-shadow: 0 3px 10px rgba(0,0,0,.45); transition: background .2s; }
+.yt-facade:hover .yt-play { background: #d00; }
+.yt-facade .yt-play::before { content: ""; position: absolute; top: 50%; left: 50%; transform: translate(-40%,-50%);
+  border-style: solid; border-width: 11px 0 11px 18px; border-color: transparent transparent transparent #fff; }
